@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import locationPin from '../assets/Sidebar/location-pin.svg'
+import weatherIcon from '../assets/Sidebar/weather.svg'
 
 export default function Sidebar(props) {
 
@@ -33,12 +34,12 @@ export default function Sidebar(props) {
                     <button id='sidebar_close_button'
                         onClick={closeMenu}>&times;</button>
                     <div className="header-container">
-                        <img id='weather-logo' src="/src/assets/Sidebar/weather.svg" alt="Fun logo" />
+                        <img id='weather-logo' src={weatherIcon} alt="Fun logo" />
                         <h1 className="weather-app-title">Weather App</h1>
                     </div>
                     <div id='divider1'></div>
                     <section className="location-box">
-                        <img id='pin-icon' src="/src/assets/Sidebar/location-pin.svg" alt="location_pic_icon" />
+                        <img id='pin-icon' src={locationPin} alt="location_pic_icon" />
                         <div className="vertical-flex-location">
                             <div id='city'>{props.city}</div>
                             <div id='state_country'>{props.state}, {props.country}</div>

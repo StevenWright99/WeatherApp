@@ -43,7 +43,7 @@ export default function Scroller({ items }) {
           <li key={index}>
             <div style={{ fontSize: "14px", textAlign: "center" }}>{item.time}</div>
             <img
-              src={`/src/assets/WeatherIcons/${item.icon}`}
+              src={item.icon}
               alt={item.time}
               style={{ width: "80px" }}
             />

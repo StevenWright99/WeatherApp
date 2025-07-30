@@ -1,5 +1,18 @@
 import { useState, useEffect } from 'react';
 
+import clearDay from '../assets/WeatherIcons/clear-day.svg'
+import clearNight from '../assets/WeatherIcons/clear-night.svg'
+import cloudy from '../assets/WeatherIcons/cloudy.svg'
+import overcastDay from '../assets/WeatherIcons/overcast-day.svg'
+import overcastNight from '../assets/WeatherIcons/overcast-night.svg'
+import partlyCloudyDay from '../assets/WeatherIcons/partly-cloudy-day.svg'
+import partlyCloudyNight from '../assets/WeatherIcons/partly-cloudy-night.svg'
+import partlyCloudy from '../assets/WeatherIcons/partly-cloudy.svg'
+import rainy from '../assets/WeatherIcons/rainy.svg'
+import snowy from '../assets/WeatherIcons/snowy.svg'
+import sunny from '../assets/WeatherIcons/sunny.svg'
+import thunder from '../assets/WeatherIcons/thunder.svg'
+
 export default function HourlyForecast({ city, country, onDataReady }) {
   const [weatherData, setWeatherData] = useState(null);
 
@@ -37,17 +50,17 @@ export default function HourlyForecast({ city, country, onDataReady }) {
 
     const cloudPercentToImage = (clouds, time) => {
       if (time <= sunset) {
-        if (clouds < 40) return "clear-day.svg";
-        if (clouds < 60) return "partly-cloudy-day.svg";
-        return "overcast-day.svg";
+        if (clouds < 40) return clearDay;
+        if (clouds < 60) return partlyCloudyDay;
+        return overcastDay;
       } else if (time > sunset && time < sunrise) {
-        if (clouds < 40) return "clear-night.svg";
-        if (clouds < 60) return "partly-cloudy-night.svg";
-        return "overcast-night.svg";
+        if (clouds < 40) return clearNight;
+        if (clouds < 60) return partlyCloudyNight;
+        return overcastNight;
       } else {
-        if (clouds < 40) return "clear-day.svg";
-        if (clouds < 60) return "partly-cloudy-day.svg";
-        return "overcast-day.svg";
+        if (clouds < 40) return clearDay;
+        if (clouds < 60) return partlyCloudyDay;
+        return overcastDay;
       }
     };
 
