@@ -2,7 +2,7 @@ import { useState } from "react";
 export default function Overlay() {
 
     //Logic for turning overlay on and off
-    const [isOn, setIsOn] = useState(true); //Overlay on by default
+    const [isOn, setIsOn] = useState(false); //Overlay off by default
 
     const toggle = () => setIsOn(prev => !prev);
 

@@ -48,7 +48,7 @@ function App() {
   // Default City when app starts
   useEffect(() => {
     const defaultCity = {
-      name: 'New York',
+      name: 'New York City',
       region: 'NY',
       country: 'United States',
       countryCode: 'US',
@@ -68,7 +68,7 @@ function App() {
         <LocationSearch onCitySelect={handleCitySelect} />
       </Sidebar>
 
-      <Overlay />
+      {/* <Overlay /> */}
       <WeeklyForecast
         // temp = {weatherData?.current.temp_f}
         city={weatherData?.city_name}

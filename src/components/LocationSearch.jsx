@@ -80,6 +80,7 @@ export default function LocationSearch({ onCitySelect}) {
     <section className='search-bar'>
       {/* Input box for city name */}
       <input 
+        id='search-bar-text'
         type="text"
         placeholder='Search for a city...'
         value={searchTerm}

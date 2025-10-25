@@ -117,7 +117,7 @@ export default function WeeklyForecast(props) {
 
 
     return (
-        <section className="mainContent" id='weather-container' >
+        <section className="mainContent" id='weather-weekly-container' >
             {/* header that extends length of forecast - contains city name*/}
             <div className='mainContent' id='header'>Weekly Forecast</div>
             {/* <div className='mainContent' id='header'>{props.city}, {props.state}</div> */}
