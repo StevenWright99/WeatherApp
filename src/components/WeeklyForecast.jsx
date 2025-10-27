@@ -91,13 +91,6 @@ export default function WeeklyForecast(props) {
         else return "Unknown Code: " + code
     }
 
-    // let linkToImage = codeToImage(800);
-    // console.log(linkToImage)
-
-    // [ 201, 802, 802, 802, 802, 801, 801 ]
-
-    // props.weatherData?.[index]?.weather?.code
-
     // Create a function that calls codeToImage 7 times, and stores results in an array
     function imageStorage() {
         const iconArray = []
@@ -111,7 +104,7 @@ export default function WeeklyForecast(props) {
     }
 
     let testArray = imageStorage()
-    console.log("testArray",testArray)
+    // console.log("testArray",testArray)
 
     testArray[0]
 
@@ -144,38 +137,7 @@ export default function WeeklyForecast(props) {
                         <div id='low'>{props.weatherData?.[index]?.min_temp}°F</div>
                     </div>
                 ))}
-                {/* Day - abbreviated to three letters */}
             </section>
-
-            {/* <section className="mainContent" id='day-names'>
-                {days.map((_, index) => (
-                    <div key={index} className="mainContent" id='what-day'>DAY</div>
-                ))}
-            </section>
-            <section className="mainContent" id='weather-icons'>
-                <img id='weather-icon' src={props.image[0].day.condition.icon} alt="weather icon" />
-            </section>
-            <section className="mainContent" id='condition'>
-                <div id='weather-condition'>{props.condition}</div>
-            </section>
-            <section className="mainContent" id='highs'>
-                <div id='high'>{props.forecast[0].day.maxtemp_f}°</div>
-            </section>
-            <section className="mainContent" id='lows'>
-                <div id='low'>{props.forecast[0].day.mintemp_f}°</div>
-            </section> */}
-
-
-            {/* Image */}
-            {/* Weather Type */}
-
-            {/* High / Low */}
-
-            {/*     or */}
-
-            {/*     High
-                        Low      */}  {/* maube different sizes */}
-            {/* <div className='background-layer'></div> */}
         </section>
     )
 }

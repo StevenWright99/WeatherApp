@@ -41,13 +41,13 @@ export default function Scroller({ items }) {
       <ul className="scroller" ref={scrollerRef}>
         {items.map((item, index) => (
           <li key={index}>
-            <div style={{ fontSize: "14px", textAlign: "center" }}>{item.time}</div>
+            <div style={{ fontSize: "clamp(0.6rem, 0.8vw, 10rem)", textAlign: "center" }}>{item.time}</div>
             <img
               src={item.icon}
               alt={item.time}
-              style={{ width: "80px" }}
+              style={{ width: "4vw" }}
             />
-            <div style={{ fontSize: "14px", textAlign: "center" }}>{item.temp}°F</div>
+            <div style={{ fontSize: "clamp(0.6rem, 0.8vw, 10rem)", textAlign: "center" }}>{item.temp}°F</div>
           </li>
         ))}
       </ul>

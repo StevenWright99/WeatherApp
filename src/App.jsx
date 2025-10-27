@@ -64,21 +64,12 @@ function App() {
         city={weatherData?.city_name}  //Using ? because will break if API data doesn't load before the page renders 
         state={weatherData?.state_code}
         country={weatherData?.country_code}>
-        {/* Search input (autocomplete) */}
         <LocationSearch onCitySelect={handleCitySelect} />
       </Sidebar>
-
-      {/* <Overlay /> */}
       <WeeklyForecast
-        // temp = {weatherData?.current.temp_f}
         city={weatherData?.city_name}
         state={weatherData?.state_code}
         weatherData={weatherData?.data}
-      // high = {weatherData?.data[0].max_temp}
-      // low = {weatherData?.data[0].min_temp}
-      // forecast = {weatherData?.forecast.forecastday}
-      // image = {weatherData?.forecast.forecastday}
-      // condition = {weatherData?.data[0].weather.description}
       />
       <HourlyForecastNoRender
         city={weatherData?.city_name}
@@ -90,8 +81,6 @@ function App() {
         city={weatherData?.city_name}
         country={weatherData?.country_code}
       />
-      
-
     </>
   )
 }

@@ -14,11 +14,6 @@ import thunder from '../assets/WeatherIcons/thunder.svg'
 
 export default function CurrentWeather(props) {
 
-    // console.log('Are these correct?', props)
-    // Fetching current weather data
-
-    // const URLnoImperial = 'https://api.weatherbit.io/v2.0/forecast/hourly?city=Katy&country=US&key=93ca16a4c7014f4f86279558d8ae95a7'
-
     const API_KEY = import.meta.env.VITE_WEATHERBIT_KEY;
 
     const [weatherData, setWeatherData] = useState(null);
@@ -35,7 +30,7 @@ export default function CurrentWeather(props) {
         };
 
         fetchData();
-    }, [props.city, props.country]); // ✅ runs every time city or country changes
+    }, [props.city, props.country]); //  runs every time city or country changes
 
 
     // Stolen code from Weather.jsx. <-- Need to abstract. It's ugly and repeats in three separate files

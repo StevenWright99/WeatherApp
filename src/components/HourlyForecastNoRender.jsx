@@ -13,6 +13,7 @@ import snowy from '../assets/WeatherIcons/snowy.svg'
 import sunny from '../assets/WeatherIcons/sunny.svg'
 import thunder from '../assets/WeatherIcons/thunder.svg'
 
+// Contains logic for grabbing the correct Times, Icons, and Temperatures for scrolling display. These values get passed to Scroller.jsx to be displayed.
 export default function HourlyForecast({ city, country, onDataReady }) {
   const [weatherData, setWeatherData] = useState(null);
 
@@ -45,15 +46,41 @@ export default function HourlyForecast({ city, country, onDataReady }) {
       });
     };
 
-    const sunset = "2025-07-29T20:00:00";
-    const sunrise = "2025-07-30T06:00:00";
+    // Establishing Sunset and Sunrise variables
+    const sunset = new Date();
+    const sunrise = new Date();
+    // Adjusting (hours, minutes, seconds) in 24hr format
+    sunset.setHours(20, 0, 0) //8PM
+    sunrise.setHours(30, 0, 0) //6AM next day (24+6)
+    // Formatting Sunset
+    const formattedSunset = new Intl.DateTimeFormat('sv-SE', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    }).format(sunset).replace(' ', 'T');
+    // Formatting Sunrise
+    const formattedSunrise = new Intl.DateTimeFormat('sv-SE', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    }).format(sunrise).replace(' ', 'T');
 
+    // Takes percent cloud coverage from json and converts to specific icon
     const cloudPercentToImage = (clouds, time) => {
-      if (time <= sunset) {
+      if (time <= formattedSunset) {
         if (clouds < 40) return clearDay;
+        // console.log(clouds);
         if (clouds < 60) return partlyCloudyDay;
         return overcastDay;
-      } else if (time > sunset && time < sunrise) {
+      } else if (time > formattedSunset && time < formattedSunrise) {
         if (clouds < 40) return clearNight;
         if (clouds < 60) return partlyCloudyNight;
         return overcastNight;

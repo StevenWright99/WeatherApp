@@ -279,28 +279,26 @@ body{
   position: relative;
   z-index:10;
 }
-.weather-container {
-  position: absolute;
-}
+
 
 #weather-weekly-container{
-  /* border: 10px solid black; */
-  /* border-radius: 10px; */
+  /* border: 4px solid black; */
   width: fit-content;
-  /* height: fit-content; */
+  height: fit-content;
   position: relative;
-  top: 100px;
-  /* margin-left: 35%; */
+  top: 14vh;
+  width: 50vw;
+  height: fit-content;
   /* left: clamp(500px, 5vw, 600px); */
-  left: 850px;
+  left: 40vw;
   /* z-index: 20; */
 }
 
 /* Weekly Header */
 #header{
-  /* border: 2px solid purple; */
-  width: 1008px;
-  height: 60px;
+  /* border: 3px solid purple; */
+  /* width: 1008px; */
+  height: 7vh;
   /* top: 100px; */
   margin: 0 auto;
   background-color: rgba(29, 50, 174, 0.6);
@@ -308,7 +306,7 @@ body{
   box-shadow: inset 0 0 2px 1px white;
   color: white;
   align-content: center;
-  font-size: 40px;
+  font-size: clamp(1em, 2vw, 10em);
   font-weight: 900;
   padding-left: 10px;
   box-sizing: border-box; /*Special! When I added padding above, the width extended. This makes that not happen*/
@@ -316,18 +314,20 @@ body{
 
 /* Box - Day */
 #days-box-collection{
+  /* border: 3px solid green; */
   display: flex;
   align-items: center;
-  /* top: 100px; */
-  width: fit-content;
-  margin: 0 auto;
+  /* height: fit-content; */
+  /* width: fit-content; */
+  /* min-height: 400px; */
+  /* margin: 0 auto; */
 }
 #weather-info-container{
-  /* border: 2px solid cornflowerblue; */
-  width: 144px;
-  height: 600px;
-  margin: 0;
-  padding: 0;
+  /* border: 5px solid cornflowerblue; */
+  width: 10vw;
+  min-width: 7vw;
+  height: fit-content;
+  /* min-height: fit-content; */
   background-color: rgba(29, 50, 174, 0.6);
   /* horiz, vert, blur, spread, color */
   box-shadow: inset 0 0 2px 1px white;
@@ -338,48 +338,63 @@ body{
   color: white;
   font-weight: 900;
   position: relative;
-  font-size: 40px;
+  font-size: clamp(1em, 2vw, 10em);
+  /* font-size: 40px; */
   /* top: 10px; */
   box-sizing: border-box;
 }
 #image{
   text-align: center;
-  width: fit-content;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  /* width: fit-content; */
   /* width: 80px; */
+  /* border: 2px solid pink; */
+  position: relative;
+  top: 5vh;
+  display: flex;
 }
 #weather-icon{
-  width: 150px;
+  width: 7vw;
 }
 #condition{
   text-align: center;
   color: white;
   font-weight: 900;
-  font-size: 20.5px;
   position: relative;
-  top: 50px;
-  width: 140px;
+  font-size: clamp(0.4em, 1.05vw, 10em);
   margin: 0 auto;
-  height: 80px;
+  height: 7vh;
+  position: relative;
+  /* top: 6vh; */
   /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  /* margin-bottom: 2vh; */
+
 }
 #high{
   text-align: center;
   color: white;
   font-weight: 900;
   position: relative;
-  top: 200px;
-  font-size: 40px;
+  /* top: 200px; */
+  font-size: clamp(1em, 2vw, 10em);
+  /* top: 14vh; */
+  /* border: 2px solid black; */
+  margin-top: 10vh;
 }
 #low{
   text-align: center;
   color: white;
   font-weight: 900;
   position: relative;
-  top: 200px;
-  font-size: 40px;
+  /* top: 14vh; */
+  font-size: clamp(1em, 2vw, 10em);
+  /* border: 2px solid black; */
+  margin-top: 2vh;
 }
-
 /* 
 */
 /*   ~  H O U R L Y   F O R E C A S T   ~   */
@@ -389,13 +404,13 @@ body{
 #hourly-section{
   position: absolute;
   height: fit-content;
-  width: 1800px;
+  width: 1600px;
   background-color: #fff;
   border-radius: 10px;
   top: 850px;
   left: 500px;
   box-sizing: border-box;
-  /* border: 2px solid brown; */
+  /* border: 4px solid brown; */
   display: flex;
   z-index: 10;
 
@@ -421,27 +436,29 @@ body{
 */
 
 #weather-current-container{
-  width: 500px;
-  height:660px;
+  /* width: 500px; */
+  width: 24vw;
+  /* height:fit-content; */
+  /* height: 62vh; */
   position: absolute;
-  top: 100px;
-  left: 200px;
+  top: 10vh;
+  left: 10vw;
   z-index: 10;
   /* background-color: #083e84bb; */
   /* width: fit-content; */
   /* border: 2px solid green; */
   background-color: rgba(29, 50, 174, 0.6);
   box-shadow: inset 0 0 2px 1px white;
-  
+  min-height: 200px;
 }
 #current-city{
-  font-size: 40px;
+  font-size: clamp(1em, 3.5vw, 10em);
   margin: 0 auto;
   width: fit-content;
   color: #fff;
   position: relative;
-  top: 30px;
-
+  top: 3vh;
+  /* border: 2px solid black; */
 }
 #current-image-container{
   /* border: 2px solid black; */
@@ -449,17 +466,17 @@ body{
   height: fit-content;
   margin: 0 auto;
   position: relative;
-  top: 50px;
+  /* top: 50px; */
 }
 #current-image{
   /* border: 2px solid purple; */
-  width: 350px;
+  width: 22vw;
   position: relative;
   z-index: 12;
   /* left: 20px; */
-  /* bottom: 50px;/ */
-  margin-top: -60px;
-  margin-bottom: -20px;
+  top: 5vh;
+  margin-top: -8vh;
+  margin-bottom: -2vh;
   
 }
 #current-temp-container{
@@ -470,36 +487,38 @@ body{
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 200px;
+  height: 14vh;
   /* right: 20px; */
   /* margin: 0 auto; */
 }
 #current-temp{
-  font-size: 65px;
+  font-size: clamp(1em, 5vw, 10em);
   position: relative;
   /* bottom: 100px; */
   /* left: 20px; */
   margin: 0 auto;
   width: fit-content;
   color: white;
+  /* border: 2px solid springgreen; */
+}
+#current-feelsLike{
+  color: white;
+  font-size: clamp(1em, 2vw, 10em);
+  /* border: 2px solid gray; */
 }
 #current-condition{
   display: flex;
-  font-size:45px;
+  font-size: clamp(1em, 3vw, 10em);
   position: relative;
   color: #fff;
   margin: 0 auto;
   width: fit-content;
-  height: 120px;
+  /* height: 120px; */
   /* border: 2px solid yellow; */
   align-items: center;
-  height: 120px;
+  height: 12vh;
   /* bottom: 400px; */
   /* left: 350px; */
-}
-#current-feelsLike{
-  color: white;
-  font-size: 25px;
 }
 
 
@@ -608,10 +627,10 @@ input:checked + .slider:before {
   overflow: hidden;
   position: relative;
   border: 2px solid black;
-  top: 170px;
+  top: 22vh;
   background-color: rgba(8, 19, 35, 0.536);
-  width: 1800px;
-  left: 125px;
+  width: 90vw;
+  left: 6vw;
   /* margin: 0 auto; */
 }
 
@@ -629,12 +648,12 @@ ul.scroller li {
   display: inline-block;
   white-space: normal;
   vertical-align: middle;
-  padding: 10px;
+  padding: 1vw;
   list-style: none;
   color: #ffffff;
   /* border: 2px solid black; */
 }
 
 #img1, #img2, #img3 {
-  width: 100px;
+  width: 1000px;
 }
