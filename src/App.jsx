@@ -52,7 +52,10 @@ function App() {
 
   return (
     <>
-    <title>Weather App</title>
+    <head>
+      <title>Weather App</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    </head>
       <Sidebar
         city={weatherData?.city_name}  //Using ? because will break if API data doesn't load before the page renders 
         state={weatherData?.state_code}
