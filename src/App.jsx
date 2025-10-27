@@ -9,14 +9,6 @@ import CurrentWeather from './components/CurrentWeather'
 import Scroller from './components/Scroller'
 import HourlyForecastNoRender from './components/HourlyForecastNoRender'
 
-
-// const OLDapi_key = '28855b5ab9e04adfb4d20639250506'
-// const OLDcity = 'Katy'
-// const OLDURL = `http://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city}&days=7&aqi=no&alerts=no"`
-
-// const api_key = '93ca16a4c7014f4f86279558d8ae95a7'
-// const URL = 'https://api.weatherbit.io/v2.0/forecast/daily?city=Katy%2C%20Tx&units=I&key=93ca16a4c7014f4f86279558d8ae95a7'
-
 const API_KEY = import.meta.env.VITE_WEATHERBIT_KEY;
 
 function App() {
@@ -60,6 +52,7 @@ function App() {
 
   return (
     <>
+    <title>Weather App</title>
       <Sidebar
         city={weatherData?.city_name}  //Using ? because will break if API data doesn't load before the page renders 
         state={weatherData?.state_code}
