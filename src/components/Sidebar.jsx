@@ -49,7 +49,7 @@ export default function Sidebar(props) {
                         {/* props.children - VERY NECESSARY - renders <LocationSearch /> to the page*/}
                         {props.children}
                     </section>
-                    <div className="footer">© Copyright 2024 - Steven Wright</div>
+                    <div className="footer">© Copyright 2025 - Steven Wright</div>
                 </section>
             )}
             {/* This diaplays menu button that can be clicked to open sidebar */}
